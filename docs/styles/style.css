@@ -1,0 +1,83 @@
+#dropzone {
+  background-color: #cfc;
+  border: solid 3px #9c9;
+  color: #9c9;
+  min-height: 50px;
+  padding: 20px;
+  text-shadow: 1px 1px 0 #fff; }
+  #dropzone.dropover {
+    background-color: #cff;
+    color: #9cc; }
+
+#files:empty::before {
+  color: #ccc;
+  content: "(Files data will be shown here.)"; }
+
+#files img {
+  border: solid 1px #ccc;
+  cursor: pointer;
+  height: auto;
+  margin: 0 10px;
+  max-height: 128px;
+  max-width: 128px;
+  width: auto; }
+
+#txtarea {
+  width: 90%;
+  height: 200px;
+  overflow: auto;
+  background: black;
+  color: white;
+  white-space: pre;
+  padding: 1em; }
+
+#links > p {
+  font-weight: 400; }
+
+.item_category {
+  list-style: none; }
+  .item_category > li {
+    font-weight: 300; }
+
+.item_childs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start; }
+  .item_childs > li {
+    list-style: none;
+    font-size: medium;
+    margin-left: 2em;
+    margin-bottom: 1em; }
+
+#links .acd-check {
+  display: none; }
+#links .acd-label {
+  background: black;
+  color: #fff;
+  display: block;
+  margin-bottom: 1px;
+  padding: 3px; }
+#links > ul:nth-child(1) .acd-label {
+  background: navy; }
+#links > ul:nth-child(2) .acd-label {
+  background: #00499a; }
+#links > ul:nth-child(3) .acd-label {
+  background: #005000; }
+#links > ul:nth-child(4) .acd-label {
+  background: #e5e2d8;
+  color: #333; }
+#links > ul:nth-child(5) .acd-label {
+  background: #78983D; }
+#links > ul:nth-child(6) .acd-label {
+  background: #1752B5; }
+#links > ul:nth-child(7) .acd-label {
+  background: #2275A8; }
+#links .acd-content {
+  height: auto;
+  opacity: 1;
+  padding: 10px;
+  visibility: visible; }
+
+/*# sourceMappingURL=style.css.map */
