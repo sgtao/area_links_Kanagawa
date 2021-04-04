@@ -22,6 +22,24 @@
   max-width: 128px;
   width: auto; }
 
+#menu {
+  position: fixed;
+  background-color: #fff;
+  border-top: 3px solid #222;
+  width: 100%;
+  bottom: 0; }
+  #menu #menu-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    #menu #menu-link > .menu-item {
+      list-style: none;
+      border: 1px solid #333;
+      border-radius: 5px; }
+      #menu #menu-link > .menu-item:hover {
+        background-color: #88f;
+        cursor: pointer; }
+
 #txtarea {
   width: 90%;
   height: 200px;

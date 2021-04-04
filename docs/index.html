@@ -9,44 +9,80 @@
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header class="header">
-    <h1>area_links_Kanagawa</h1>
-    <div>
-      神奈川県内の各自治体の広報サイトへのリンクや地域ニュースへのリンクをまとめています。
-    </div>
-  </header>
-  <hr>
-  <main id="links">
-    <p>リンク一覧：</p>
-  </main>
-  <hr>
-  <section class="abstract">
-    <div>
-      このコンテンツは、『<a href="https://sgtao.github.io/csv2link_items/" target="_blank">csv2link_items</a>』のエンジンを使い下のテキストから生成しています。
-    </div>
-    <div id="txtarea"></div>
-  </section>
-  <hr>
-  <footer class="footer">
-    <p>use encoding-japanese library - Copyright (c) 2013-2018 polygon planet <polygon.planet.aqua@gmail.com></p>
-    <p>Copyright (c) 2021 sgtao <sg.tao.so@gmail.com> All Rights Reserved.</p>
-  </footer>
-  <!-- <table id="show_table"></table> -->
+  <div id="container">
+    <header class="header">
+      <h1>area_links_Kanagawa</h1>
+      <div>
+        神奈川県内の各自治体の広報サイトへのリンクや地域ニュースへのリンクをまとめています。
+      </div>
+    </header>
+    <hr>
+    <nav id="menu">
+      <div><b style="color:red">Menu:</b></div>
+      <ul id="menu-link">
+        <li class="menu-item" id="govs-news">自治体プレスリリース</li>
+        <li class="menu-item" id="govs-paper">自治体広報誌</li>
+        <li class="menu-item" id="town-news">タウンニュース</li>
+      </ul>
+    </nav>
+    <hr>
+    <main id="links">
+      <p>リンク一覧：</p>
+    </main>
+    <hr>
+    <section class="abstract">
+      <div>
+        このコンテンツは、『<a href="https://sgtao.github.io/csv2link_items/" target="_blank">csv2link_items</a>』のエンジンを使い下のテキストから生成しています。
+      </div>
+      <div id="txtarea"></div>
+    </section>
+    <hr>
+    <footer class="footer">
+      <p>use encoding-japanese library - Copyright (c) 2013-2018 polygon planet <polygon.planet.aqua@gmail.com></p>
+      <p>Copyright (c) 2021 sgtao <sg.tao.so@gmail.com> All Rights Reserved.</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </footer>
+  </div>
   <script src="scripts/vendors/encoding.js"></script>
   <script src="scripts/main.js"></script>
   <script>
-    // use fetch to retrieve the products and pass them to init
-    // report any errors that occur in the fetch operation
-    // once the products have been successfully loaded and formatted as a JSON object
-    // using response.json(), run the initialize() function
-    let filename = "assets/kanagawa_govs_news.csv";
-    fetch(filename).then(function(response) {
-      return response.text();
-    }).then(function(textContent) {
-      showText(elTxtArea, textContent);
-    }).catch(function(err) {
-      console.log('Fetch problem: ' + err.message);
-    });
+    function showLinks(filename) {
+      // use fetch to retrieve the products and pass them to init
+      // report any errors that occur in the fetch operation
+      // once the products have been successfully loaded and formatted as a JSON object
+      // using response.json(), run the initialize() function
+      // let filename = "assets/kanagawa_govs_news.csv";
+      fetch(filename).then(function(response) {
+        return response.text();
+      }).then(function(textContent) {
+        showText(elTxtArea, textContent);
+      }).catch(function(err) {
+        console.log('Fetch problem: ' + err.message);
+      });
+    }
+    function init () {
+      // showLinks("assets/kanagawa_govs_top.csv");
+      showLinks("assets/kanagawa_govs_news.csv");
+      // const govs_top  = document.querySelector('#govs-top');
+      const govs_news = document.querySelector('#govs-news');
+      const govs_paper = document.querySelector('#govs-paper');
+      const town_news = document.querySelector('#town-news');
+
+      govs_news.addEventListener('click', (e) => {
+        showLinks("assets/kanagawa_govs_news.csv");
+      });
+      govs_paper.addEventListener('click', (e) => {
+        showLinks("assets/kanagawa_govs_paper.csv");
+      });
+      town_news.addEventListener('click', (e) => {
+        showLinks("assets/kanagawa_town_news.csv");
+      });
+    }
+    init();
   </script>
 </body>
 </html>
