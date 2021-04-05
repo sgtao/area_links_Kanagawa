@@ -28,7 +28,7 @@
 // menu
 #menu {
 	position:fixed;
-	background-color: #fff;
+	background-color: #eee;
 	border-top: 3px solid #222;
 	width: 100%;
 	bottom: 0;
@@ -39,6 +39,7 @@
 		justify-content:space-between;
 		& > .menu-item {
 			list-style: none;
+			background-color: #cfc;
 			border: 1px solid #333;
 			border-radius: 5px;
 			&:hover {
