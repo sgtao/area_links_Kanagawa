@@ -33,9 +33,20 @@
   border-top: 3px solid #222;
   width: 100%;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-#menu #menu-link {
+#menu .menu-link {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,21 +54,31 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
-#menu #menu-link > .menu-item {
+#menu .menu-link > li {
   list-style: none;
   background-color: #cfc;
   border: 1px solid #333;
   border-radius: 5px;
+  width: 30%;
 }
 
-#menu #menu-link > .menu-item:hover {
+#menu .menu-link > li:hover {
   background-color: #88f;
   cursor: pointer;
+}
+
+#menu .menu-link > li > .menu-item {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 #txtarea {
