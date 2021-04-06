@@ -263,3 +263,42 @@ function csv2obarray(content) {
 function load_fr_url(url) {
         load_textfile(elTxtArea, url);
 }
+
+function showLinks(filename) {
+        // use fetch to retrieve the products and pass them to init
+        // report any errors that occur in the fetch operation
+        // once the products have been successfully loaded and formatted as a JSON object
+        // using response.json(), run the initialize() function
+        // let filename = "assets/kanagawa_govs_news.csv";
+        fetch(filename).then(function (response) {
+                return response.text();
+        }).then(function (textContent) {
+                showText(elTxtArea, textContent);
+        }).catch(function (err) {
+                console.log('Fetch problem: ' + err.message);
+        });
+}
+
+// initialize
+function init() {
+        // const govs_top  = document.querySelector('#govs-top');
+        const govs_news = document.querySelector('#govs-news');
+        const govs_paper = document.querySelector('#govs-paper');
+        const town_news = document.querySelector('#town-news');
+
+        showLinks("assets/kanagawa_govs_news.csv");
+
+        govs_news.addEventListener('click', (e) => {
+                showLinks("assets/kanagawa_govs_news.csv");
+        });
+        govs_paper.addEventListener('click', (e) => {
+                showLinks("assets/kanagawa_govs_paper.csv");
+        });
+        town_news.addEventListener('click', (e) => {
+                showLinks("assets/kanagawa_town_news.csv");
+        });
+}
+
+window.addEventListener('load', (event) => {
+        init();
+});

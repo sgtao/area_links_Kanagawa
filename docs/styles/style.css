@@ -27,83 +27,6 @@
   width: auto;
 }
 
-#menu {
-  position: fixed;
-  background-color: #eee;
-  border-top: 3px solid #222;
-  width: 100%;
-  padding: 10px 0 20px 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-#menu .menu-link {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto;
-}
-
-#menu .menu-link > li {
-  list-style: none;
-  background-color: #cfc;
-  border: 1px solid #333;
-  border-radius: 5px;
-  width: 30%;
-  padding: 10px 0;
-}
-
-#menu .menu-link > li:hover {
-  background-color: #88f;
-  cursor: pointer;
-}
-
-#menu .menu-link > li > .menu-item {
-  display: inline-block;
-  text-align: center;
-}
-
-.menu-icon {
-  content: "";
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  margin: 0 auto;
-  background-size: contain;
-  vertical-align: middle;
-}
-
-#govs-news .menu-icon {
-  background: url("../images/speaker-icon.svg") no-repeat;
-}
-
-#govs-paper .menu-icon {
-  background: url("../images/publish-icon.svg") no-repeat;
-}
-
-#town-news .menu-icon {
-  background: url("../images/news-paper.svg") no-repeat;
-}
-
 #txtarea {
   width: 90%;
   height: 200px;
@@ -196,5 +119,82 @@
   opacity: 1;
   padding: 10px;
   visibility: visible;
+}
+
+#menu {
+  position: fixed;
+  background-color: #eee;
+  border-top: 3px solid #222;
+  width: 100%;
+  padding: 10px 0 20px 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#menu .menu-link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+#menu .menu-link > li {
+  list-style: none;
+  background-color: #cfc;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width: 30%;
+  padding: 10px 0;
+}
+
+#menu .menu-link > li:hover {
+  background-color: #88f;
+  cursor: pointer;
+}
+
+#menu .menu-link > li > .menu-item {
+  display: inline-block;
+  text-align: center;
+}
+
+.menu-icon {
+  content: "";
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin: 0 auto;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+#govs-news .menu-icon {
+  background: url("../images/speaker-icon.svg") no-repeat;
+}
+
+#govs-paper .menu-icon {
+  background: url("../images/publish-icon.svg") no-repeat;
+}
+
+#town-news .menu-icon {
+  background: url("../images/news-paper.svg") no-repeat;
 }
 /*# sourceMappingURL=style.css.map */

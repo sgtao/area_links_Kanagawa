@@ -49,40 +49,5 @@
   </div>
   <script src="scripts/vendors/encoding.js"></script>
   <script src="scripts/main.js"></script>
-  <script>
-    function showLinks(filename) {
-      // use fetch to retrieve the products and pass them to init
-      // report any errors that occur in the fetch operation
-      // once the products have been successfully loaded and formatted as a JSON object
-      // using response.json(), run the initialize() function
-      // let filename = "assets/kanagawa_govs_news.csv";
-      fetch(filename).then(function(response) {
-        return response.text();
-      }).then(function(textContent) {
-        showText(elTxtArea, textContent);
-      }).catch(function(err) {
-        console.log('Fetch problem: ' + err.message);
-      });
-    }
-    function init () {
-      // showLinks("assets/kanagawa_govs_top.csv");
-      showLinks("assets/kanagawa_govs_news.csv");
-      // const govs_top  = document.querySelector('#govs-top');
-      const govs_news = document.querySelector('#govs-news');
-      const govs_paper = document.querySelector('#govs-paper');
-      const town_news = document.querySelector('#town-news');
-
-      govs_news.addEventListener('click', (e) => {
-        showLinks("assets/kanagawa_govs_news.csv");
-      });
-      govs_paper.addEventListener('click', (e) => {
-        showLinks("assets/kanagawa_govs_paper.csv");
-      });
-      town_news.addEventListener('click', (e) => {
-        showLinks("assets/kanagawa_town_news.csv");
-      });
-    }
-    init();
-  </script>
 </body>
 </html>
